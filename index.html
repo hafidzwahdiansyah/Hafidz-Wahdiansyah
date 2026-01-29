@@ -756,9 +756,8 @@ Hafidz waktu sekolah dikenal ramah dan mudah bergaul. Dia enak diajak diskusi, s
       <div class="row text-white">
   <div class="col-12 col-lg-6 gradient shadow p-0 contact-map">
 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5027.581952758109!2d105.3268237517679!3d-5.205826257609068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1769672732029!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-
 <style>
-  /* bikin row sejajar tingginya */
+/* ===== DESKTOP ===== */
 .row.text-white {
   display: flex;
   align-items: stretch;
@@ -792,16 +791,35 @@ Hafidz waktu sekolah dikenal ramah dan mudah bergaul. Dia enak diajak diskusi, s
   );
   pointer-events: none;
 }
+
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
   .row.text-white {
     flex-direction: column;
   }
 
+  /* map turun ke bawah & aman */
   .contact-map {
-    min-height: 300px;
+    min-height: 260px;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .contact-map iframe {
+    min-height: 260px;
   }
 }
 
+/* ===== EXTRA SMALL (HP kecil) ===== */
+@media (max-width: 480px) {
+  .contact-map {
+    min-height: 220px;
+  }
+
+  .contact-map iframe {
+    min-height: 220px;
+  }
+}
 </style>
 
         <div class="col-12 col-lg-6 bg-white shadow p-3">
