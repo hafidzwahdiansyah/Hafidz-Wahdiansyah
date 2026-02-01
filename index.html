@@ -1,0 +1,1248 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Hafidz Wahdiansyah</title>
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="assets/css/fontawesome.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+      <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  <!-- ////////////////////////////////////////////////////////////////////////////////////////
+                                START SECTION 1 - THE NAVBAR SECTION  
+  /////////////////////////////////////////////////////////////////////////////////////////////-->
+  <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="">
+          <img src="images/logofidz.png" alt="logo image" width="220" height="53">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link " aria-current="page" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pendidikan">Pendidikan</a></li>
+            <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pengalaman">Pengalaman</a></li>
+            <li class="nav-item"><a class="nav-link" href="#portfolio">portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">contact</a>
+            </li>
+          </ul>
+        
+        </div>
+      </div>
+    </nav>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
+                              START SECTION 2 - THE INTRO SECTION  
+  /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+  <section id="home" class="intro-section">
+<div class="container">
+
+  <style>
+    .intro-text-wrap {
+      max-width: 520px;
+    }
+
+    /* TYPEWRITER */
+    .typewriter {
+      display: inline;
+      line-height: 1.2;
+      border-right: 3px solid #fff;
+      padding-right: 6px;
+      animation: caret 0.8s infinite;
+    }
+
+    .typewriter.done {
+      border-right: none;
+    }
+
+    @keyframes caret {
+      50% { border-color: transparent; }
+    }
+
+    /* SLIDE RIGHT TEXT */
+    .slide-right {
+      opacity: 0;
+      transform: translateX(-40px);
+      animation: slideRight 1s ease-out forwards;
+      animation-delay: 1.6s; /* muncul setelah typing selesai */
+    }
+
+    @keyframes slideRight {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* IMAGE */
+    .hero-photo {
+      opacity: 0;
+      transform: translateY(50px) scale(0.95);
+      animation: photoIn 1s ease-out forwards,
+                 float 5s ease-in-out infinite;
+      animation-delay: 1.2s;
+      filter: drop-shadow(0 20px 40px rgba(0,0,0,0.35));
+    }
+
+    @keyframes photoIn {
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes float {
+      50% { transform: translateY(-14px); }
+    }
+  </style>
+
+  <div class="row align-items-center text-white">
+
+    <!-- TEXT -->
+    <div class="col-md-6 intros text-start">
+      <div class="intro-text-wrap">
+        <h1 class="display-2">
+
+          <span class="display-2--intro typewriter">
+            Hey!, I'm Hafidz Wahdiansyah
+          </span>
+
+          <span class="display-2--description lh-base d-block mt-3 slide-right">
+            Data Science Student (Class of 2024) Sumatera Institute of Technology.
+          </span>
+
+        </h1>
+                <button type="button"
+          class="rounded-pill btn-rounded display-2--description lh-base d-block mt-3 slide-right "
+          onclick="window.open('https://drive.google.com/file/d/1tfLJVBHnyeaFxe6-oAppKTKmdh3LyzdY/view?usp=drive_link', '_blank')">
+          Download CV <span><i class="fas fa-download"></i></span>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- IMAGE -->
+    <div class="col-md-6 intros text-end">
+      <div class="video-box">
+        <img src="images/arts/fidzz.png"
+             alt="Hafidz Wahdiansyah"
+             class="img-fluid hero-photo">
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const el = document.querySelector(".typewriter");
+    const text = el.textContent.trim();
+    el.textContent = "";
+
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        el.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 70);
+      } else {
+        el.classList.add("done");
+      }
+    }
+    typeWriter();
+  </script>
+
+</div>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,133.3C672,139,768,213,864,202.7C960,192,1056,96,1152,74.7C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+  </section>
+
+
+
+
+  <!-- //////////////////////////////////////////////////////////////////////////////////////////////
+                          START SECTION 4 - THE SERVICES  
+  ///////////////////////////////////////////////////////////////////////////////////////////////////-->
+<section id="pendidikan" class="education">
+  <div class="container">
+
+    <div class="row text-center">
+      <h1 class="display-3 fw-bold">Pendidikan</h1>
+      <div class="heading-line mb-1"></div>
+    </div>
+
+    <div class="row pt-2 pb-2 mt-0 mb-3 align-items-center">
+      <!-- LOGO -->
+      <div class="col-md-6 border-right text-center">
+        <img src="images/Logo_ITERA.png"
+             alt="Logo Pendidikan"
+             class="img-fluid-logo-itera itera-logo">
+      </div>
+
+      <!-- TEXT -->
+      <div class="col-md-6">
+        <div class="bg-white p-4 text-start">
+   <div class="icon d-block fas fa-university icon-sekolah"> <h3 class="display-3--title mt-1">Institut Teknologi Sumatera</h3>
+  </div>          <p class="fw-light">
+           Saya berkuliah di Institut Teknologi Sumatera, Fakultas Sains,
+          Program Studi Sains Data, yang berlokasi di Provinsi Lampung,
+          Kabupaten Lampung Selatan. Saat ini sedang menempuh Semester 4,
+          saya mempelajari statistika, pemrograman, analisis data, serta
+          dasar riset sebagai bekal mengembangkan kemampuan berpikir analitis,
+          pemecahan masalah, dan kesiapan akademik maupun profesional.
+          </p>
+            <a href="#" class="btn-read-more slide-right">
+  Baca selengkapnya
+  <span><i class="fas fa-long-arrow-alt-right"></i></span>
+</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= STYLE ================= -->
+ <style>
+/* SECTION MASUK DULU */
+.education {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.education.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* LOGO ITERA MASUK DARI KIRI */
+.itera-logo {
+  opacity: 0;
+  transform: translateX(-80px);
+  transition: all 0.8s ease;
+  transition-delay: 0.3s;
+}
+
+.education.active .itera-logo {
+  opacity: 1;
+  transform: translateX(0);
+  animation: float 3.5s ease-in-out infinite;
+  animation-delay: 1.1s;
+}
+
+/* TEKS MASUK DARI KANAN */
+.education .bg-white {
+  opacity: 0;
+  transform: translateX(80px);
+  transition: all 0.8s ease;
+  transition-delay: 1s;
+}
+
+.education.active .bg-white {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* FLOAT LOGO */
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+</style>
+<!-- ================= SCRIPT ================= -->
+<script>
+window.addEventListener("load", () => {
+
+  const education = document.querySelector(".education");
+
+  const durasiAnimasiHome = 3500; // animasi Home
+  const jedaSetelahHome = 200;    // jeda 0,25 detik
+
+  setTimeout(() => {
+    education.classList.add("active");
+  }, durasiAnimasiHome + jedaSetelahHome);
+
+});
+</script>
+
+
+
+
+
+    
+    <!-- START THE CONTENT FOR THE SERVICES  -->
+    <!-- ================= SEKOLAH (SMK) ================= -->
+<section class="school">
+  <div class="container">
+
+    <div class="row pt-2 align-items-center">
+      <!-- TEXT -->
+      <div class="col-lg-6 col-md-6 col-sm-12 services school-text">
+        <div class="services__content">
+          <h3 class="display-3--title mt-1">
+            <i class="fas fa-school me-2"></i>
+            SMKN 3 Metro
+          </h3>
+          <p class="lh-lg">
+           Saya merupakan alumni SMK Negeri 3 Metro, Jurusan Rekayasa Perangkat Lunak. Selama masa pendidikan, saya mempelajari dasar pemrograman, pengembangan aplikasi, pengelolaan basis data, serta logika algoritma yang membentuk keterampilan teknis, kedisiplinan, dan kesiapan menghadapi dunia kerja berbasis teknologi.
+          </p>
+     <a href="#" class="btn-read-more slide-right">
+  Baca selengkapnya
+  <span><i class="fas fa-long-arrow-alt-right"></i></span>
+</a>
+
+<style>
+  .btn-read-more {
+  position: relative;
+  overflow: hidden;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 500;
+
+  border-radius: 50px;
+  border: 1px solid #023581;
+  background-color: transparent;
+  color: #261973;
+
+  cursor: pointer;
+  transition: 
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+/* efek naik + bayangan */
+.btn-read-more:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 47, 117, 0.25);
+  background-color: #261973;
+  color: #fff;
+}
+
+/* icon */
+.btn-read-more i {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+/* icon meluncur */
+.btn-read-more:hover i {
+  transform: translateX(6px);
+}
+
+/* sweep light effect */
+.btn-read-more::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: all 0.6s ease;
+}
+
+.btn-read-more,
+.btn-read-more:hover,
+.btn-read-more:focus,
+.btn-read-more:active,
+.btn-read-more:visited {
+  text-decoration: none !important;
+}
+
+/* jalankan sweep saat hover */
+.btn-read-more:hover::before {
+  left: 120%;
+}
+.btn-read-more:active {
+  transform: scale(0.95);
+}
+/* Tablet */
+@media (max-width: 768px) {
+  .btn-read-more {
+    padding: 7px 16px;
+    font-size: 13px;
+    gap: 6px;
+  }
+
+  .btn-read-more i {
+    font-size: 11px;
+  }
+}
+
+/* HP */
+@media (max-width: 576px) {
+  .btn-read-more {
+    padding: 6px 14px;
+    font-size: 12.5px;
+    border-radius: 30px;
+  }
+
+  /* animasi lebih ringan di HP */
+  .btn-read-more:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(13, 110, 253, 0.25);
+  }
+
+  .btn-read-more:hover i {
+    transform: translateX(3px);
+  }
+}
+
+
+</style>
+            </div>
+      </div>
+
+      <!-- IMAGE -->
+      <div class="col-lg-6 col-md-6 col-sm-12 services school-image text-center">
+        <img src="images/logosmk.webp" alt="Logo SMK" class="img-fluid-smk">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+/* ===== SMK DEFAULT (HIDDEN) ===== */
+.school-text,
+.school-image {
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+/* TEXT MASUK DARI KANAN */
+.school-text {
+  transform: translateX(60px);
+}
+
+/* IMAGE MASUK DARI KIRI */
+.school-image {
+  transform: translateX(-60px);
+}
+
+/* ACTIVE */
+.school.active .school-text,
+.school.active .school-image {
+  opacity: 1;
+  transform: translateX(0);
+}
+/* FLOATING EFFECT */
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* LOGO MELAYANG SETELAH MASUK */
+.school.active .school-image {
+  animation: float 3.5s ease-in-out infinite;
+  animation-delay: 1s; /* nunggu animasi masuk selesai */
+}
+
+</style>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+window.addEventListener("load", () => {
+
+  const education = document.querySelector(".education");
+  const school = document.querySelector(".school");
+
+  const durasiAnimasiHome = 3500; // home
+  const jedaSetelahHome = 250;    // jeda home → itera
+  const durasiAnimasiItera = 2200; // itera (masuk + melayang awal)
+  const jedaKeSMK = 300;          // jeda sebelum SMK
+
+  // PENDIDIKAN (ITERA)
+  setTimeout(() => {
+    education.classList.add("active");
+  }, durasiAnimasiHome + jedaSetelahHome);
+
+  // SEKOLAH (SMK) → setelah ITERA
+  setTimeout(() => {
+    school.classList.add("active");
+  }, durasiAnimasiHome + jedaSetelahHome + durasiAnimasiItera + jedaKeSMK);
+
+});
+
+</script>
+
+  </section>
+  
+
+  <!-- ////////////////////////////////////////////////////////////////////////////////////////////////
+                                START SECTION 5 - THE TESTIMONIALS  
+  /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+  <section id="testimonials" class="testimonials">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+    <div class="container">
+ <div class="row text-center text-white">
+  <h1 class="display-3 fw-bold float-text">
+    Apa kata mereka?
+  </h1>
+  <hr style="width: 100px; height: 3px;" class="mx-auto">
+  <p class="lead pt-1" style="font-size: 18px;">
+    Pendapat dan pengalaman mereka tentang saya
+  </p>
+</div>
+
+
+
+<style>
+  /* DEFAULT HIDDEN */
+/* TEKS MELAYANG */
+/* JUDUL MELAYANG HALUS */
+.float-text {
+  animation: floating 4s ease-in-out infinite;
+}
+
+/* ANIMASI FLOAT */
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+</style>
+
+      <!-- START THE CAROUSEL CONTENT  -->
+      <div class="row align-items-center">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!-- CAROUSEL ITEM 1 -->
+            <div class="carousel-item active">
+              <!-- testimonials card  -->
+              <div class="testimonials__card">
+                <p class="lh-lg">
+                  <i class="fas fa-quote-left"></i>
+                Bertanggung jawab dan enak diajak kerja sama,cepat, tegas, komunikatif, dan selalu berusaha memberikan hasil terbaik dalam setiap kerja tim.
+                  <i class="fas fa-quote-right"></i>
+                  <div class="ratings p-1">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </p>
+              </div>
+              <!-- client picture  -->
+              <div class="testimonials__picture">
+                <img src="images/testimonials/iqbal.jpeg" alt="testi1" class="rounded-circle img-fluid">
+              </div>
+              <!-- client name & role  -->
+              <div class="testimonials__name">
+                <h3>Moch. Iqbal Az-Zahir</h3>
+                <p class="fw-light">Sains Data 24</p>
+              </div>
+            </div>     
+            <!-- CAROUSEL ITEM 2 -->
+            <div class="carousel-item">
+              <!-- testimonials card  -->
+              <div class="testimonials__card">
+                <p class="lh-lg">
+                  <i class="fas fa-quote-left"></i>
+                 Mudah beradaptasi dengan lingkungan baru. Ia cepat menyesuaikan diri dan tetap menjaga komunikasi yang baik dengan tim nya
+                  <i class="fas fa-quote-right"></i>
+                  <div class="ratings p-1">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </p>
+              </div>
+              <!-- client picture  -->
+              <div class="testimonials__picture">
+                <img src="images/testimonials/harvin.jpeg" alt="client-2 picture" class="rounded-circle img-fluid">
+              </div>
+              <!-- client name & role  -->
+              <div class="testimonials__name">
+                <h3>Muhammad Harvinsyah</h3>
+                <p class="fw-light">Sains Data 24</p>
+              </div>
+            </div>     
+            <!-- CAROUSEL ITEM 3 -->
+            <div class="carousel-item">
+              <!-- testimonials card  -->
+              <div class="testimonials__card">
+                <p class="lh-lg">
+                  <i class="fas fa-quote-left"></i>
+Hafidz waktu sekolah dikenal ramah dan mudah bergaul. Dia enak diajak diskusi, sering bantu teman, dan aktif saat kerja kelompok.                  <i class="fas fa-quote-right"></i>
+                  <div class="ratings p-1">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </p>
+              </div>
+              <!-- client picture  -->
+              <div class="testimonials__picture">
+                <img src="images/testimonials/albertus.jpeg" alt="client-3 picture" class="rounded-circle img-fluid">
+              </div>
+              <!-- client name & role  -->
+              <div class="testimonials__name">
+                <h3>Albertus Aditya N.S</h3>
+                <p class="fw-light">Alumni SMKN 3 Metro</p>
+              </div>
+            </div>     
+            <!-- CAROUSEL ITEM 4 -->
+            <div class="carousel-item">
+              <!-- testimonials card  -->
+              <div class="testimonials__card">
+                <p class="lh-lg">
+                  <i class="fas fa-quote-left"></i>
+                Secara keseluruhan, Hafidz adalah adik tingkat yang menyenangkan. Ramah, komunikatif, dan mudah berbaur dengan kakak tingkat.                  <i class="fas fa-quote-right"></i>
+                  <div class="ratings p-1">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </p>
+              </div>
+              <!-- client picture  -->
+              <div class="testimonials__picture">
+                <img src="images/testimonials/dea amanda.jpg" alt="client-4 picture" class="rounded-circle img-fluid">
+              </div>
+              <!-- client name & role  -->
+              <div class="testimonials__name">
+                <h3>Dea Amanda</h3>
+                <p class="fw-light">Sains Data 23</p>
+
+              </div>
+            </div>     
+          </div>
+          <div class="text-center">
+            <button class="btn btn-outline-light fas fa-long-arrow-alt-left" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          </button>
+          <button class="btn btn-outline-light fas fa-long-arrow-alt-right" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+  </section>
+
+
+  <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
+                        START SECTION 6 - THE FAQ 
+  //////////////////////////////////////////////////////////////////////////////////////////////////////-->
+  <section id="pengalaman" class="faq">
+    <div class="container">
+      <div class="row text-center">
+        <h1 class="display-3 fw-bold text-uppercase">Pengalaman</h1>
+        <div class="heading-line"></div>
+      </div>
+      <!-- ACCORDION CONTENT  -->
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <div class="accordion" id="accordionExample">
+            <!-- ACCORDION ITEM 1 -->
+           <div class="accordion-item shadow mb-3">
+  <h2 class="accordion-header" id="headingOne">
+    <button class="accordion-button collapsed" type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapseOne"
+      aria-expanded="false"
+      aria-controls="collapseOne">
+                  Data Sport Competition - November 2025
+    </button>
+  </h2>
+
+  <div id="collapseOne"
+       class="accordion-collapse collapse"
+       aria-labelledby="headingOne"
+       data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+      <strong>Staff Operasional</strong><br>
+            Sebagai Staff Logistik, saya bertanggung jawab menyiapkan dan memastikan ketersediaan perlengkapan serta
+  kebutuhan teknis kegiatan, mengatur distribusi, dan berkoordinasi dengan tim agar acara berjalan lancar. Peran
+  ini melatih kedisiplinan, tanggung jawab, dan kemampuan koordinasi.
+    </div>
+  </div>
+</div>
+
+              <!-- ACCORDION ITEM 2 -->
+            <div class="accordion-item shadow mb-3">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  SIKRAB TPB 04 - Mei 2025
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>Kadiv Operasional</strong> <br>
+                      Sebagai Kepala Divisi Operasional, saya bertanggung jawab mengatur kelancaran kegiatan dan memastikan kebutuhan teknis terpenuhi tepat waktu, membagi tugas tim secara efektif, serta menjaga koordinasi.
+
+                  </div>
+              </div>
+            </div>
+              <!-- ACCORDION ITEM 3 -->
+            <div class="accordion-item shadow mb-3">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Magang di CV.Naistudio - Juli 2023
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>Graphic Designer and Web Development Team</strong> <br>
+                  Selama magang di CV.Naistudio, saya berperan sebagai desainer grafis dan anggota tim pengembangan web. Tugas saya meliputi pembuatan desain visual untuk materi pemasaran serta membantu dalam pengembangan dan pemeliharaan situs web klien. Pengalaman ini memperdalam keterampilan teknis saya dalam desain grafis dan pengembangan web, serta memberikan wawasan praktis tentang dinamika kerja di industri kreatif.
+                  </div>
+              </div>
+            </div>
+              <!-- ACCORDION ITEM 4 
+            <div class="accordion-item shadow mb-3">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  404 Not Found
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>Halaman ini belum tersedia</strong> <br>..........
+                </div>
+              </div>
+            -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////
+                                START SECTION 7 - THE PORTFOLIO  
+  //////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <div class="row text-center mt-5">
+        <h1 class="display-3 fw-bold text-capitalize">Portofolio</h1>
+        <div class="heading-line"></div>
+        <p class="lead">
+          Berikut adalah beberapa hasil karya saya dalam berbagai proyek dan tugas yang telah saya selesaikan.
+        </p>
+      </div>
+      <!-- FILTER BUTTONS  -->
+      <div class="row mt-5 mb-4 g-3 text-center">
+        <div class="col-md-12">
+          <button class="btn btn-outline-primary" type="button">All</button>
+        </div>
+      </div>
+
+      <!-- START THE PORTFOLIO ITEMS  -->
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="portfolio-box shadow">
+            <img src="images/portfolio/uangkas.jpeg" alt="portfolio 1 image" title="portfolio 1 picture" class="img-fluid">
+            <div class="portfolio-info">
+              <div class="caption">
+                <h4>Aplikasi Uang Kas</h4>
+<p class="download-portfolio">
+  <a href="https://drive.google.com/uc?export=download&id=1AbCDefGhIJkLMnOP" target="_blank">
+    <i class="fas fa-download"></i> Download
+  </a>
+</p>
+<style>
+  /* wrapper */
+.download-portfolio a {
+  position: relative;
+  overflow: hidden;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #0d6efd;
+  text-decoration: none;
+
+  border-radius: 12px;
+  border: 1px solid #0d6efd;
+  background: transparent;
+
+  transition: 
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+/* hover naik + glow */
+.download-portfolio a:hover {
+  transform: translateY(-3px);
+  background-color: #0d6efd;
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(13, 110, 253, 0.35);
+}
+
+/* icon anim */
+.download-portfolio i {
+  font-size: 15px;
+  transition: transform 0.35s ease;
+}
+
+/* icon turun dikit */
+.download-portfolio a:hover i {
+  transform: translateY(3px);
+}
+
+/* shimmer light */
+.download-portfolio a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+  transition: all 0.6s ease;
+}
+
+.download-portfolio a:hover::before {
+  left: 120%;
+}
+@media (max-width: 576px) {
+  .download-portfolio a {
+    padding: 8px 16px;
+    font-size: 13px;
+    border-radius: 10px;
+  }
+
+  .download-portfolio a:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(13, 110, 253, 0.3);
+  }
+}
+
+
+</style>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="portfolio-box shadow">
+            <img src="images/portfolio/aplikasispp.png" alt="portfolio 2 image" title="portfolio 2 picture" class="img-fluid">
+            <div class="portfolio-info">
+              <div class="caption">
+                <h4>Aplikasi Pembayaran SPP</h4>
+<p class="download-portfolio">
+  <a href="https://drive.google.com/uc?export=download&id=1AbCDefGhIJkLMnOP" target="_blank">
+    <i class="fas fa-download"></i> Download
+  </a>
+</p>              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="portfolio-box shadow">
+            <img src="images/portfolio/nocovid.png" alt="portfolio 3 image" title="portfolio 3 picture" class="img-fluid">
+            <div class="portfolio-info">
+              <div class="caption">
+                <h4>Web No Covid</h4>
+<p class="download-portfolio">
+  <a href="https://drive.google.com/uc?export=download&id=1AbCDefGhIJkLMnOP" target="_blank">
+    <i class="fas fa-download"></i> Download
+  </a>
+</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!--
+        <div class="col-lg-4 col-md-6">
+          <div class="portfolio-box shadow">
+            <img src="images/portfolio/portfolio-4.jpg" alt="portfolio 4 image" title="portfolio 4 picture" class="img-fluid">
+            <div class="portfolio-info">
+              <div class="caption">
+                <h4>project name goes here 4</h4>
+<p class="download-portfolio">
+  <a href="https://drive.google.com/uc?export=download&id=1AbCDefGhIJkLMnOP" target="_blank">
+    <i class="fas fa-download"></i> Download
+  </a>
+</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="portfolio-box shadow">
+            <img src="images/portfolio/portfolio-5.jpg" alt="portfolio 5 image" title="portfolio 5 picture" class="img-fluid">
+            <div class="portfolio-info">
+              <div class="caption">
+                <h4>project name goes here 5</h4>
+<p class="download-portfolio">
+  <a href="https://drive.google.com/uc?export=download&id=1AbCDefGhIJkLMnOP" target="_blank">
+    <i class="fas fa-download"></i> Download
+  </a>
+</p>              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="portfolio-box shadow">
+            <img src="images/portfolio/portfolio-6.jpg" alt="portfolio 6 image" title="portfolio 6 picture" class="img-fluid">
+            <div class="portfolio-info">
+              <div class="caption">
+                <h4>project name goes here 6</h4>
+<p class="download-portfolio">
+  <a href="https://drive.google.com/uc?export=download&id=1AbCDefGhIJkLMnOP" target="_blank">
+    <i class="fas fa-download"></i> Download
+  </a>
+</p>              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="portfolio-box shadow">
+            <img src="images/portfolio/portfolio-7.jpg" alt="portfolio 7 image" title="portfolio 7 picture" class="img-fluid">
+            <div class="portfolio-info">
+              <div class="caption">
+                <h4>project name goes here 7</h4>
+<p class="download-portfolio">
+  <a href="https://drive.google.com/uc?export=download&id=1AbCDefGhIJkLMnOP" target="_blank">
+    <i class="fas fa-download"></i> Download
+  </a>
+</p>              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="portfolio-box shadow">
+            <img src="images/portfolio/portfolio-8.jpg" alt="portfolio 8 image" title="portfolio 8 picture" class="img-fluid">
+            <div class="portfolio-info">
+              <div class="caption">
+                <h4>project name goes here 8</h4>
+<p class="download-portfolio">
+  <a href="https://drive.google.com/uc?export=download&id=1AbCDefGhIJkLMnOP" target="_blank">
+    <i class="fas fa-download"></i> Download
+  </a>
+</p>              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="portfolio-box shadow">
+            <img src="images/portfolio/portfolio-9.jpg" alt="portfolio 9 image" title="portfolio 9 picture" class="img-fluid">
+            <div class="portfolio-info">
+              <div class="caption">
+                <h4>project name goes here 9</h4>
+<p class="download-portfolio">
+  <a href="https://drive.google.com/uc?export=download&id=1AbCDefGhIJkLMnOP" target="_blank">
+    <i class="fas fa-download"></i> Download
+  </a>
+</p>              </div>
+            </div>
+          </div>
+        </div>
+      -->
+      </div>
+    </div>
+  </section>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////
+                START SECTION 8 - GET STARTED  
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+  <section id="contact" class="get-started">
+    <div class="container">
+      <div class="row text-center">
+        <h1 class="display-3 fw-bold text-capitalize">Contact Us</h1>
+        <div class="heading-line"></div>
+        <p class="lh-lg">
+          Beritahu kami jika terdapat eror / bug
+        </p>
+      </div>
+
+      <!-- START THE CTA CONTENT  -->
+      <div class="row text-white">
+  <div class="col-12 col-lg-6 gradient shadow p-0 contact-map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5027.581952758109!2d105.3268237517679!3d-5.205826257609068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1769672732029!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
+ <style>
+/* ===== DESKTOP ===== */
+.row.text-white {
+  display: flex;
+  align-items: stretch;
+}
+
+/* kolom map FULL */
+.contact-map {
+  position: relative;
+  min-height: 100%;
+  display: flex;
+}
+
+/* iframe isi full kolom */
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  border: 0;
+  flex: 1;
+}
+
+/* gradient overlay (opsional) */
+.contact-map::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 20, 60, 0.45),
+    rgba(140, 130, 252, 0.35)
+  );
+  pointer-events: none;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .row.text-white {
+    flex-direction: column;
+  }
+
+  /* map turun ke bawah & aman */
+  .contact-map {
+    min-height: 260px;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .contact-map iframe {
+    min-height: 260px;
+  }
+}
+
+/* ===== EXTRA SMALL (HP kecil) ===== */
+@media (max-width: 480px) {
+  .contact-map {
+    min-height: 220px;
+  }
+
+  .contact-map iframe {
+    min-height: 220px;
+  }
+}
+</style>
+
+        <div class="col-12 col-lg-6 bg-white shadow p-3">
+          <div class="form w-100 pb-2">
+            <h4 class="display-3--title mb-5">Kirim Pesan</h4>
+            <form action="#" class="row">
+              <div class="col-lg-6 col-md mb-3">
+                <input type="text" placeholder="First Name" id="inputFirstName" class="shadow form-control form-control-lg">
+              </div>
+              <div class="col-lg-6 col-md mb-3">
+                <input type="text" placeholder="Last Name" id="inputLastName" class="shadow form-control form-control-lg">
+              </div>
+              <div class="col-lg-12 mb-3">
+                <input type="email" placeholder="email address" id="inputEmail" class="shadow form-control form-control-lg">
+              </div>
+              <div class="col-lg-12 mb-3">
+                <textarea name="message" placeholder="message" id="message" rows="8" class="shadow form-control form-control-lg"></textarea>
+              </div>
+              <div class="text-center d-grid mt-1">
+                <button type="button" class="btn btn-primary rounded-pill pt-3 pb-3">
+                  submit
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ///////////////////////////////////////////////////////////////////////////////////////////
+                            START SECTION 9 - THE FOOTER  
+  ///////////////////////////////////////////////////////////////////////////////////////////////-->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <!-- CONTENT FOR THE MOBILE NUMBER  -->
+        <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+          <div class="contact-box__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone-call" viewBox="0 0 24 24" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+              <path d="M15 7a2 2 0 0 1 2 2" />
+              <path d="M15 3a6 6 0 0 1 6 6" />
+            </svg>
+          </div>
+          <div class="contact-box__info">
+            <a href="#" class="contact-box__info--title">+62 89506574727</a>
+            <p class="contact-box__info--subtitle">  Mon-Fri 9am-6pm</p>
+          </div>
+        </div>  
+        <!-- CONTENT FOR EMAIL  -->
+        <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+          <div class="contact-box__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail-opened" viewBox="0 0 24 24" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <polyline points="3 9 12 15 21 9 12 3 3 9" />
+              <path d="M21 9v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
+              <line x1="3" y1="19" x2="9" y2="13" />
+              <line x1="15" y1="13" x2="21" y2="19" />
+            </svg>
+          </div>
+          <div class="contact-box__info">
+            <a href="#" class="contact-box__info--title">hafidzwahdiansyah12.com</a>
+            <p class="contact-box__info--subtitle">Online support</p>
+          </div>
+        </div>
+        <!-- CONTENT FOR LOCATION  -->
+        <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+          <div class="contact-box__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2" viewBox="0 0 24 24" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <line x1="18" y1="6" x2="18" y2="6.01" />
+              <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
+              <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
+              <line x1="9" y1="4" x2="9" y2="17" />
+              <line x1="15" y1="15" x2="15" y2="20" />
+            </svg>
+          </div>
+          <div class="contact-box__info">
+            <a href="#" class="contact-box__info--title">Lampung, Indonesia</a>
+            <p class="contact-box__info--subtitle">Metro kibang, Lampung Timur </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- START THE SOCIAL MEDIA CONTENT  -->
+    <div class="footer-sm" style="background-color: #212121;">
+      <div class="container">
+        <div class="row py-4 text-center text-white">
+          <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
+            connect with us on social media
+          </div>
+          <div class="col-lg-7 col-md-6">
+         
+            <a href="https://github.com/hafidzwahdiansyah"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/apiszzaja_?igsh=MWRwdWpiNDN1ZHBibg=="><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- START THE CONTENT FOR THE CAMPANY INFO -->
+    <div class="container mt-5">
+      <div class="row text-white justify-content-center mt-3 pb-3">
+        <div class="col-12 col-sm-6 col-lg-6 mx-auto">
+          <h5 class="text-capitalize fw-bold">FiddzStudio</h5>
+          <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+          <p class="lh-lg">
+            FiddzStudio adalah impian studio yang ingin dimiliki oleh Hafidz Wahdiansyah di masa yang akan datang
+          </p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
+          <h5 class="text-capitalize fw-bold">Products</h5>
+          <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+          <ul class="list-inline campany-list">
+            <li><a href="#">Aplikasi Uang Kas</a></li>
+            <li><a href="#">Sistem Aplikasi Laudnry</a></li>
+
+          </ul>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
+          <h5 class="text-capitalize fw-bold">useful links</h5>
+          <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+          <ul class="list-inline campany-list">
+            <li><a href="https://ffshare.garena.com/?region=ID&lang=ind">Free Fire</a></li>
+         
+          </ul>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
+          <h5 class="text-capitalize fw-bold">contact</h5>
+          <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+          <ul class="list-inline campany-list">
+            <li><a href="https://wa.me/6289506574727" target="_blank">0895-0657-5727</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- START THE COPYRIGHT INFO  -->
+    <div class="footer-bottom pt-5 pb-5">
+      <div class="container">
+        <div class="row text-center text-white">
+          <div class="col-12">
+            <div class="footer-bottom__copyright">
+              &COPY; Copyright 2026 <a href="#">FiddzStudio</a> | Created by <a href="#" >Hafidz Wahdiansyah</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON  -->
+  <a href="#" class="shadow btn-primary rounded-circle back-to-top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+
+
+    
+      <script src="assets/vendors/js/glightbox.min.js"></script>
+
+      <script type="text/javascript">
+        const lightbox = GLightbox({
+          'touchNavigation': true,
+          'href': 'https://www.youtube.com/watch?v=J9lS14nM1xg',
+          'type': 'video',
+          'source': 'youtube', //vimeo, youtube or local
+          'width': 900,
+          'autoPlayVideos': 'true',
+  });
+      
+      </script>
+      <script src="assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+  </html>
